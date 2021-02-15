@@ -8,6 +8,8 @@ var speed = 60;
 (function () {
   typeWriter();
   projectsHandler.CreateArvr()
+  projectsHandler.CreateMobileApplications()
+  projectsHandler.CreateWebsites()
 })();
 
 

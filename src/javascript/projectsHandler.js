@@ -20,7 +20,7 @@ export let arvr = [
     },
     {
         "Title": "VR Escape Room",
-        "Description": "Escape room targeted for smaller kids, where they solve some mysteries to find the key and win the game. The game contains 4 steps to complete, and itøs in VR. It's built in Unity for Oculus Quest using the Oculus Integration Package.",
+        "Description": "Escape room targeted for smaller kids, where they solve some mysteries to find the key and win the game. The game contains 4 steps to complete, and it's in VR. It's built in Unity for Oculus Quest using the Oculus Integration Package.",
         "ProjectLinks": ["https://github.com/nayaaltahan/mix1-assignment4"],
         "VideoId": "LMlsVQx5Be0"
     }
@@ -28,7 +28,7 @@ export let arvr = [
 export let websites = [
     {
         "Title": "Website for Bed and Breakfast",
-        "Description": "When I first learned about ASP.NET and how to create a web appliaction using it, I decided to create this little website for a bed and breakfast, I used ASP.NET MVC which makes the architecture of the application very effiecent and easy to understand",
+        "Description": "When I first learned about ASP.NET and how to create a web application using it, I decided to create this little website for a bed and breakfast, I used ASP.NET MVC which makes the architecture of the application very efficient and easy to understand",
         "ProjectLinks": ["https://github.com/nayaaltahan/rytterskolens_bb_website"],
         "VideoId": "PNWBnJ9CqzI"
     },
@@ -42,13 +42,13 @@ export let websites = [
 export let mobileApplications = [
     {
         "Title": "Dothraki Translator",
-        "Description": "I created this application to translate english words and phrases to Dothraki, a Games of Thrones language. The application is programmed in Java and runs on Android phones. THe appliaction translates, saves translation history, and has a share functionality",
+        "Description": "I created this application to translate english words and phrases to Dothraki, a Games of Thrones language. The application is programmed in Java and runs on Android phones. THe application translates, saves translation history, and has a share functionality",
         "ProjectLinks": ["https://github.com/nayaaltahan/GOT_Dothraki-English_Translator"],
         "VideoId": "XHHHlnzu6Qk"
     },
     {
         "Title": "Plant Management Application",
-        "Description": "An application that tracks plants using a sensors device. the device tracks light, humidity, temperature and CO2 levels to make sure its within the limits that the end-user has specified. The user can view the plant data and the data will show in red in case it's not within the limits. The application keeps the data stored in a database and gets it through an API built in Java. The Data has a datawarehouse that can be viewed though PowerBI, I was responsible of the backend and data warehousing parts of the project",
+        "Description": "An application that tracks plants using a sensors device. the device tracks light, humidity, temperature and CO2 levels to make sure its within the limits that the end-user has specified. The user can view the plant data and the data will show in red in case it's not within the limits. The application keeps the data stored in a database and gets it through an API built in Java. The Data has a data warehouse that can be viewed though PowerBI, I was responsible of the backend and data warehousing parts of the project",
         "ProjectLinks": ["https://github.com/nayaaltahan/DB_SEP4_PMI", "https://github.com/mungiu/SEP4_PMI"],
         "VideoId": "AjJiwaHSCUU"
     }
@@ -63,6 +63,28 @@ export function CreateArvr() {
     });
     let arvrDom = document.getElementById("arvr")
     arvrDom.append(arvrDocument)
+}
+
+export function CreateMobileApplications() {
+    var mobileApplicationsDocument = document.createDocumentFragment();
+
+    mobileApplications.forEach(project => {
+        let row = addProject(project)
+        mobileApplicationsDocument.append(row)
+    });
+    let mobileApplicationsDom = document.getElementById("mobileApplications")
+    mobileApplicationsDom.append(mobileApplicationsDocument)
+}
+
+export function CreateWebsites() {
+    var websitesDocument = document.createDocumentFragment();
+
+    websites.forEach(project => {
+        let row = addProject(project)
+        websitesDocument.append(row)
+    });
+    let websitesDom = document.getElementById("websites")
+    websitesDom.append(websitesDocument)
 }
 
 
