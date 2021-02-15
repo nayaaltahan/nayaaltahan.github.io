@@ -32,44 +32,31 @@
     <link href="./src/css/styles.css" rel="stylesheet">
 </head>
 
-<body class="h-100 text-white bg-dark">
+<body class="h-100 text-white">
     <div class="d-flex h-100 text-center" id="mainSection">
         <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
             <header class="mb-auto">
                 <div>
                     <h3 class="float-md-start mb-0">Naya Al Tahan</h3>
-                    <nav class="nav nav-masthead justify-content-center float-md-end">
-                        <a class="nav-link active" aria-current="page"
-                            href="https://getbootstrap.com/docs/5.0/examples/cover/#">Home</a>
-                        <a class="nav-link" href="https://getbootstrap.com/docs/5.0/examples/cover/#">Features</a>
-                        <a class="nav-link" href="https://getbootstrap.com/docs/5.0/examples/cover/#">Contact</a>
-                    </nav>
                 </div>
             </header>
 
-            <main class="px-3 text-left">
-                <h1>Hi There!</h1>
-                <p class="lead" id="mainText"></p>
-                <p class="lead">
-                    <a href="https://getbootstrap.com/docs/5.0/examples/cover/#"
-                        class="btn btn-lg btn-secondary fw-bold border-white bg-white">Learn more</a>
-                </p>
+            <main class="p-3 d-flex justify-content-md-start px-3 text-left">
+                <img src="./src/img/pp.jpg" width= "30%" alt="Profile Picture" id="ProfilePicture">
+                <div>
+                    <h1>Hi There!</h1>
+                    <p class="lead" id="mainText"></p>
+                </div>
             </main>
         </div>
     </div>
-    <div class="container">
+    <div class="container" id="Projects">
         <h1>My Projects</h1>
-        <ul class="nav nav-tabs">
-            <li class="nav-item">
-                <a href="#arvr" class="nav-link active" data-toggle="tab">AR / VR</a>
-            </li>
-            <li class="nav-item">
-                <a href="#mobileApplications" class="nav-link" data-toggle="tab">Mobile Applications</a>
-            </li>
-            <li class="nav-item">
-                <a href="#websites" class="nav-link" data-toggle="tab">Websites</a>
-            </li>
-        </ul>
+        <nav class="nav nav-masthead justify-content-center float-md-end">
+            <a href="#arvr" class="nav-link active" data-toggle="tab">AR / VR</a>
+            <a href="#mobileApplications" class="nav-link" data-toggle="tab">Mobile Applications</a>
+            <a href="#websites" class="nav-link" data-toggle="tab">Websites</a>
+        </nav>
         <div class="tab-content">
             <div class="tab-pane fade show active" id="arvr">
 
