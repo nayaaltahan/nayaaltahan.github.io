@@ -1,7 +1,7 @@
 let projectLink = "Project Link"
 let backend = "Project Link: Backend"
 let frontend = "Project Link: Frontend"
-let database = "Project Link: Database Setup"
+let database = "Project Link: Database"
 let arvr = [
     {
         "Title": "AR Brick Breaker Game",
@@ -113,6 +113,7 @@ export function CreateArvrAsCards() {
     for (let i = 0; i < arvr.length; i+=2) {
         var row = document.createElement("DIV")
         row.classList.add("row");
+        row.classList.add('card-group')
         let col1 = addProjectAsCard(arvr[i])
         if(arvr[i+1])
         {
@@ -153,6 +154,7 @@ export function CreateMobileApplicationsAsCards() {
     for (let i = 0; i < mobileApplications.length; i+=2) {
         var row = document.createElement("DIV")
         row.classList.add("row");
+        row.classList.add('card-group')
         let col1 = addProjectAsCard(mobileApplications[i])
         row.append(col1)
         if(mobileApplications[i+1])
@@ -171,6 +173,7 @@ export function CreateWebsitesAsCards() {
     for (let i = 0; i < websites.length; i+=2) {
         var row = document.createElement("DIV")
         row.classList.add("row");
+        row.classList.add('card-group')
         let col1 = addProjectAsCard(websites[i])
         if(websites[i+1])
         {
@@ -208,8 +211,12 @@ function addProjectAsCard(project){
   var col = document.createElement("DIV")
     col.classList.add("col-xl-6");
     col.classList.add("project");
+    col.classList.add('card')
+    col.classList.add('mt-4')
     var textDiv = document.createElement("DIV")
     textDiv.classList.add("card-body");
+    textDiv.classList.add("d-flex");
+    textDiv.classList.add("flex-column");
     var h1 = document.createElement("H4")
     h1.innerHTML = project.Title;
     h1.classList.add('card-title')
@@ -218,14 +225,19 @@ function addProjectAsCard(project){
     p.classList.add('card-text')
     textDiv.append(h1);
     textDiv.append(p);
+    var btnGroup = document.createElement("DIV")
+    btnGroup.classList.add("btn-group");
+    btnGroup.classList.add('mt-auto')
+    btnGroup.setAttribute('role', 'group')
     project.ProjectLinks.forEach(projectLink => {
         var a = document.createElement("A")
         a.innerHTML = projectLink.description;
         a.href = projectLink.link;
         a.classList.add('btn')
         a.classList.add('btn-dark')
-        textDiv.append(a)
+        btnGroup.append(a)
     });
+    textDiv.append(btnGroup)
 
     var videoDiv = document.createElement("DIV")
    // videoDiv.classList.add("auto-resizable-iframe");
