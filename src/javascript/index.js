@@ -7,15 +7,14 @@ var speed = 60;
 
 (function () {
   typeWriter();
-  projectsHandler.CreateArvr()
-  projectsHandler.CreateMobileApplications()
-  projectsHandler.CreateWebsites()
+  projectsHandler.CreateArvrAsCards()
+  projectsHandler.CreateMobileApplicationsAsCards()
+  projectsHandler.CreateWebsitesAsCards()
 })();
 
 
 function typeWriter() {
   if (i < txt.length) {
-    document.getElementsByClassName("lead")[0].innerHTML ;
     document.getElementById("mainText").innerHTML += txt.charAt(i);
     i++;
     setTimeout(typeWriter, speed);

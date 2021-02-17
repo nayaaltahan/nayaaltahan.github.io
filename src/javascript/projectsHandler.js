@@ -108,6 +108,24 @@ export function CreateArvr() {
     arvrDom.append(arvrDocument)
 }
 
+export function CreateArvrAsCards() {
+    var arvrDocument = document.createDocumentFragment();
+    for (let i = 0; i < arvr.length; i+=2) {
+        var row = document.createElement("DIV")
+        row.classList.add("row");
+        let col1 = addProjectAsCard(arvr[i])
+        if(arvr[i+1])
+        {
+            let col2 = addProjectAsCard(arvr[i+1])
+            row.append(col2)
+        }
+        row.append(col1)
+        arvrDocument.append(row)
+    }
+    let arvrDom = document.getElementById("arvr")
+    arvrDom.append(arvrDocument)
+}
+
 export function CreateMobileApplications() {
     var mobileApplicationsDocument = document.createDocumentFragment();
 
@@ -130,6 +148,42 @@ export function CreateWebsites() {
     websitesDom.append(websitesDocument)
 }
 
+export function CreateMobileApplicationsAsCards() {
+    var mobileApplicationsDocument = document.createDocumentFragment();
+    for (let i = 0; i < mobileApplications.length; i+=2) {
+        var row = document.createElement("DIV")
+        row.classList.add("row");
+        let col1 = addProjectAsCard(mobileApplications[i])
+        row.append(col1)
+        if(mobileApplications[i+1])
+        {
+            let col2 = addProjectAsCard(mobileApplications[i+1])
+            row.append(col2)
+        }
+        mobileApplicationsDocument.append(row)
+    }
+    let mobileApplicationsDom = document.getElementById("mobileApplications")
+    mobileApplicationsDom.append(mobileApplicationsDocument)
+}
+
+export function CreateWebsitesAsCards() {
+    var websitesDocument = document.createDocumentFragment();
+    for (let i = 0; i < websites.length; i+=2) {
+        var row = document.createElement("DIV")
+        row.classList.add("row");
+        let col1 = addProjectAsCard(websites[i])
+        if(websites[i+1])
+        {
+            let col2 = addProjectAsCard(websites[i+1])
+            row.append(col2)
+        }
+        row.append(col1)
+        websitesDocument.append(row)
+    }
+    let websitesDom = document.getElementById("websites")
+    websitesDom.append(websitesDocument)
+}
+
 
 function addVideo(VideoId){
     let iframe = document.createElement("iframe")
@@ -138,6 +192,52 @@ function addVideo(VideoId){
     iframe.setAttribute("src", "https://www.youtube.com/embed/" + VideoId + "?rel=0")
     iframe.setAttribute("frameborder", "0")
     return iframe;
+}
+
+function addProjectAsCard(project){
+  /*
+  <div class="card" style="width:400px">
+    <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
+    <div class="card-body">
+      <h4 class="card-title">John Doe</h4>
+      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+      <a href="#" class="btn btn-primary">See Profile</a>
+    </div>
+  </div>
+  */
+  var col = document.createElement("DIV")
+    col.classList.add("col-xl-6");
+    col.classList.add("project");
+    var textDiv = document.createElement("DIV")
+    textDiv.classList.add("card-body");
+    var h1 = document.createElement("H4")
+    h1.innerHTML = project.Title;
+    h1.classList.add('card-title')
+    var p = document.createElement("P")
+    p.innerHTML = project.Description;
+    p.classList.add('card-text')
+    textDiv.append(h1);
+    textDiv.append(p);
+    project.ProjectLinks.forEach(projectLink => {
+        var a = document.createElement("A")
+        a.innerHTML = projectLink.description;
+        a.href = projectLink.link;
+        a.classList.add('btn')
+        a.classList.add('btn-dark')
+        textDiv.append(a)
+    });
+
+    var videoDiv = document.createElement("DIV")
+   // videoDiv.classList.add("auto-resizable-iframe");
+    videoDiv.classList.add("embed-responsive");
+    videoDiv.classList.add("embed-responsive-16by9");
+    videoDiv.classList.add("card-img-top");
+    let div = document.createElement("DIV")
+    videoDiv.append(addVideo(project.VideoId))
+
+    col.append(videoDiv)
+    col.append(textDiv)
+    return col;
 }
 
 function addProject(project){
