@@ -96,18 +96,6 @@ let mobileApplications = [
         "VideoId": "AjJiwaHSCUU"
     }
 ]
-
-export function CreateArvr() {
-    var arvrDocument = document.createDocumentFragment();
-
-    arvr.forEach(project => {
-        let row = addProject(project)
-        arvrDocument.append(row)
-    });
-    let arvrDom = document.getElementById("arvr")
-    arvrDom.append(arvrDocument)
-}
-
 export function CreateArvrAsCards() {
     var arvrDocument = document.createDocumentFragment();
     for (let i = 0; i < arvr.length; i+=2) {
@@ -125,28 +113,6 @@ export function CreateArvrAsCards() {
     }
     let arvrDom = document.getElementById("arvr")
     arvrDom.append(arvrDocument)
-}
-
-export function CreateMobileApplications() {
-    var mobileApplicationsDocument = document.createDocumentFragment();
-
-    mobileApplications.forEach(project => {
-        let row = addProject(project)
-        mobileApplicationsDocument.append(row)
-    });
-    let mobileApplicationsDom = document.getElementById("mobileApplications")
-    mobileApplicationsDom.append(mobileApplicationsDocument)
-}
-
-export function CreateWebsites() {
-    var websitesDocument = document.createDocumentFragment();
-
-    websites.forEach(project => {
-        let row = addProject(project)
-        websitesDocument.append(row)
-    });
-    let websitesDom = document.getElementById("websites")
-    websitesDom.append(websitesDocument)
 }
 
 export function CreateMobileApplicationsAsCards() {
@@ -194,22 +160,13 @@ function addVideo(VideoId){
     iframe.setAttribute("type", "text/html")
     iframe.setAttribute("src", "https://www.youtube.com/embed/" + VideoId + "?rel=0")
     iframe.setAttribute("frameborder", "0")
+    iframe.setAttribute("allowfullscreen", "allowfullscreen")
     return iframe;
 }
 
 function addProjectAsCard(project){
-  /*
-  <div class="card" style="width:400px">
-    <img class="card-img-top" src="img_avatar1.png" alt="Card image" style="width:100%">
-    <div class="card-body">
-      <h4 class="card-title">John Doe</h4>
-      <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
-      <a href="#" class="btn btn-primary">See Profile</a>
-    </div>
-  </div>
-  */
   var col = document.createElement("DIV")
-    col.classList.add("col-xl-6");
+    col.classList.add("col-md-6");
     col.classList.add("project");
     col.classList.add('card')
     col.classList.add('mt-4')
@@ -251,35 +208,3 @@ function addProjectAsCard(project){
     col.append(textDiv)
     return col;
 }
-
-function addProject(project){
-    var row = document.createElement("DIV")
-    row.classList.add("row");
-    row.classList.add("project");
-    var col1 = document.createElement("DIV")
-    col1.classList.add("col-xl-6");
-    var h1 = document.createElement("H1")
-    h1.innerHTML = project.Title;
-    var p = document.createElement("P")
-    p.innerHTML = project.Description;
-    col1.append(h1);
-    col1.append(p);
-    project.ProjectLinks.forEach(projectLink => {
-        var a = document.createElement("A")
-        a.innerHTML = projectLink.description;
-        a.href = projectLink.link;
-        col1.append(a)
-    });
-
-    row.append(col1)
-
-    var col2 = document.createElement("DIV")
-    col2.classList.add("col-xl-6");
-    col2.classList.add("auto-resizable-iframe");
-    let div = document.createElement("DIV")
-    div.append(addVideo(project.VideoId))
-    col2.append(div)
-    row.append(col2)
-    return row;
-}
-
