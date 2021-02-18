@@ -75,13 +75,10 @@ body {
 
 .card{
     background-color:  rgb(26, 26, 26);
-    padding: 10px;
 }
 
 #mainSection {
-  background-color: transparent;
   position: relative;
-  padding: 100px 0px;
 }
 
 * {
@@ -89,6 +86,6 @@ body {
 }
 
 #ProfilePicture {
-  border-radius: 50%;
+  border-radius: 5%;
   padding: 10px;
 }

@@ -169,7 +169,7 @@ function addProjectAsCard(project){
     col.classList.add("col-md-6");
     col.classList.add("project");
     col.classList.add('card')
-    col.classList.add('mt-4')
+    col.classList.add('pt-3')
     var textDiv = document.createElement("DIV")
     textDiv.classList.add("card-body");
     textDiv.classList.add("d-flex");
