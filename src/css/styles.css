@@ -89,3 +89,7 @@ body {
   border-radius: 5%;
   padding: 10px;
 }
+
+.jumbotron{
+  background-color: black;
+}
