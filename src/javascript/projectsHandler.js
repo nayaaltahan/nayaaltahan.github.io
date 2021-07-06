@@ -2,6 +2,7 @@ let projectLink = "Project Link"
 let backend = "Project Link: Backend"
 let frontend = "Project Link: Frontend"
 let database = "Project Link: Database"
+let gameLink = "Game Link"
 let arvr = [
     {
         "Title": "AR Brick Breaker Game",
@@ -95,6 +96,22 @@ let mobileApplications = [
         ],
         "VideoId": "AjJiwaHSCUU"
     }
+];
+let games = [
+    {
+        "Title": "Pink Panther Recreation",
+        "Description": "This game is a recreation of one of the levels in the Pink Panther: Pinkadelic Pursuit 2002. Most of the assets and all the animations were created using Adobe products, and the game itself is developed in Unity",
+        "ProjectLinks": [{
+            "description" : projectLink,
+            "link" : "https://github.com/nayaaltahan/GMD-Project"
+          },
+          {
+            "description" : gameLink,
+            "link" : "https://nayaaltahan.github.io/GMD-Project/"
+          }
+        ],
+        "VideoId": "bjgc2nlqGIk"
+    }
 ]
 export function CreateArvrAsCards() {
     var arvrDocument = document.createDocumentFragment();
@@ -153,6 +170,25 @@ export function CreateWebsitesAsCards() {
     websitesDom.append(websitesDocument)
 }
 
+export function CreateGamesAsCards() {
+    var gamesDocument = document.createDocumentFragment();
+    for (let i = 0; i < games.length; i+=2) {
+        var row = document.createElement("DIV")
+        row.classList.add("row");
+        row.classList.add('card-group')
+        let col1 = addProjectAsCard(games[i],"col-md-12")
+        if(games[i+1])
+        {
+            let col2 = addProjectAsCard(games[i+1])
+            row.append(col2)
+        }
+        row.append(col1)
+        gamesDocument.append(row)
+    }
+    let gamesDom = document.getElementById("games")
+    gamesDom.append(gamesDocument)
+}
+
 
 function addVideo(VideoId){
     let iframe = document.createElement("iframe")
@@ -164,9 +200,9 @@ function addVideo(VideoId){
     return iframe;
 }
 
-function addProjectAsCard(project){
+function addProjectAsCard(project, column = "col-md-6"){
   var col = document.createElement("DIV")
-    col.classList.add("col-md-6");
+    col.classList.add(column);
     col.classList.add("project");
     col.classList.add('card')
     col.classList.add('pt-3')
@@ -180,8 +216,10 @@ function addProjectAsCard(project){
     var p = document.createElement("P")
     p.innerHTML = project.Description;
     p.classList.add('card-text')
+    var br = document.createElement("br")
     textDiv.append(h1);
     textDiv.append(p);
+    textDiv.append(br);
     var btnGroup = document.createElement("DIV")
     btnGroup.classList.add("btn-group");
     btnGroup.classList.add('mt-auto')

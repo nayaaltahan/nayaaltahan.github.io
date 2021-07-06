@@ -10,6 +10,7 @@ var speed = 60;
   projectsHandler.CreateArvrAsCards()
   projectsHandler.CreateMobileApplicationsAsCards()
   projectsHandler.CreateWebsitesAsCards()
+  projectsHandler.CreateGamesAsCards()
 })();
 
 
