@@ -111,7 +111,18 @@ let games = [
           }
         ],
         "VideoId": "bjgc2nlqGIk"
+    }, 
+    {
+        "Title": "Boon Balloon",
+        "Description": "BOON BALLOON is a 2-player cooperative 2D game about a hot-air balloon controlled by an Elephant, LOON, and a Monkey, BOON, where one player will tilt their phone to help BOON move the Balloon left and right, and the other player will shake their phone to help LOON blow into the Balloon",
+        "ProjectLinks": [{
+            "description" : projectLink,
+            "link" : "https://github.com/nayaaltahan/prototype6"
+          }
+        ],
+        "VideoId": "rwMPcyVjg3Q"
     }
+    
 ]
 export function CreateArvrAsCards() {
     var arvrDocument = document.createDocumentFragment();
