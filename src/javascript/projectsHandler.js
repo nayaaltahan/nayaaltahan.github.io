@@ -6,7 +6,7 @@ let gameLink = "Game Link"
 let arvr = [
     {
         "Title": "AR Brick Breaker Game",
-        "Description": "This was my first project done in Unity, which is a marker based augmented reality game, where the player uses the marker to play the game and break the bricks. Vuforia images targets and camera were used in this project",
+        "Description": "A simple Brick Breaker Game that uses AR to control the paddle, the games is marker based, and developed in Unity using the Vuforia Marker based package",
         "ProjectLinks": [{
             "description" : projectLink,
             "link" : "https://github.com/nayaaltahan/mix1-assignment1"
@@ -16,7 +16,7 @@ let arvr = [
     },
     {
         "Title": "Guided Virtual Travel in AR",
-        "Description": "Since the pandemic was preventing people from travelling, we decided to create an AR application that will offer the user a guided ( audio guide or text of the places' names ) tour of Paris and London. We built the app so it can be easily extended to tour around more cities. The application was built in Unity and it uses Google ARCore",
+        "Description": "The application enables the user to use AR to walk into different cities, through portals. Upon portal entry, the user views a 360 video with Audio to get a guided tour of the selected city. The project was developed in Unity and it uses Google ARCore.",
         "ProjectLinks": [{
             "description" : projectLink,
             "link" : "https://github.com/nayaaltahan/mix1-assignment22"
@@ -48,7 +48,7 @@ let arvr = [
 let websites = [
     {
         "Title": "Website for Bed and Breakfast",
-        "Description": "When I first learned about ASP.NET and how to create a web application using it, I decided to create this little website for a bed and breakfast, I used ASP.NET MVC which makes the architecture of the application very efficient and easy to understand",
+        "Description": "Commercial website for a small bed and breakfast, where the user is able to view details about the place, the stay and the location. The website was developed using ASP.NET MVC",
         "ProjectLinks": [{
             "description" : projectLink,
             "link" : "https://github.com/nayaaltahan/rytterskolens_bb_website"
@@ -74,7 +74,7 @@ let websites = [
 let mobileApplications = [
     {
         "Title": "Dothraki Translator",
-        "Description": "I created this application to translate english words and phrases to Dothraki, a Games of Thrones language. The application is programmed in Java and runs on Android phones. THe application translates, saves translation history, and has a share functionality",
+        "Description": "English to Dothraki Translator, that uses a public API to translate english words and phrases to Dothraki. The application saves translation history, and the user can share the translations to other applications.",
         "ProjectLinks": [{
             "description" : projectLink,
             "link" : "https://github.com/nayaaltahan/GOT_Dothraki-English_Translator"
@@ -100,7 +100,7 @@ let mobileApplications = [
 let games = [
     {
         "Title": "Pink Panther Recreation",
-        "Description": "This game is a recreation of one of the levels in the Pink Panther: Pinkadelic Pursuit 2002. Most of the assets and all the animations were created using Adobe products, and the game itself is developed in Unity",
+        "Description": "The game is a recreation of the Boss level in Pink Panther: Pinkadelic Pursuit. The game is developed in Unity, and the assets asnd animations are developed in Adobe",
         "ProjectLinks": [{
             "description" : projectLink,
             "link" : "https://github.com/nayaaltahan/GMD-Project"
@@ -114,7 +114,7 @@ let games = [
     }, 
     {
         "Title": "Boon Balloon",
-        "Description": "BOON BALLOON is a 2-player cooperative 2D game about a hot-air balloon controlled by an Elephant, LOON, and a Monkey, BOON, where one player will tilt their phone to help BOON move the Balloon left and right, and the other player will shake their phone to help LOON blow into the Balloon",
+        "Description": "BOON BALLOON is a 2-player cooperative 2D game about a hot-air balloon controlled by an Elephant, LOON, and a Monkey, BOON, where one player will tilt their phone to help BOON move the Balloon left and right, and the other player will shake their phone to help LOON blow into the Balloon.",
         "ProjectLinks": [{
             "description" : projectLink,
             "link" : "https://github.com/nayaaltahan/prototype6"
