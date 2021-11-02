@@ -135,6 +135,16 @@ let games = [
           }
         ],
         "VideoId": "whrHn8TDcdY"
+    },
+    {
+        "Title": "LEGO® Physical Behaviour Bricks",
+        "Description": "The LEGO® Physical Behaviour Bricks Game uses the concept of behaviour brick from the LEGO® Microgames, to let the player to use actual LEGO® bricks to control the game. The game was made during the LEGO® Game Jam 2021, in less than 40h by two developer (in which one was me) and 3 designers. The device used to detect the colors of the bricks is the LEGO® Technic Hub, and LEGO® has provided a library for reading and writing to the hub.",
+        "ProjectLinks": [{
+            "description" : projectLink,
+            "link" : "https://github.com/nayaaltahan/lego-game-jam-physical-behaviour-bricks"
+          }
+        ],
+        "VideoId": "bdCi5chKxhs"
     }
     
 ]
