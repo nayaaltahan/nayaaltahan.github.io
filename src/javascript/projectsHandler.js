@@ -1,7 +1,7 @@
-let projectLink = "Project Link"
-let backend = "Project Link: Backend"
-let frontend = "Project Link: Frontend"
-let database = "Project Link: Database"
+let projectLink = "Source Code"
+let backend = "Source Code: Backend"
+let frontend = "Source Code: Frontend"
+let database = "Source Code: Database"
 let gameLink = "Game Link"
 let arvr = [
     {
@@ -121,6 +121,20 @@ let games = [
           }
         ],
         "VideoId": "rwMPcyVjg3Q"
+    }, 
+    {
+        "Title": "Crossy Road Demake",
+        "Description": "Crossy Road Demake is a Puzzle Script based game, where you are a chicken, and you have to cross the road.",
+        "ProjectLinks": [{
+            "description" : projectLink,
+            "link" : "https://www.puzzlescript.net/editor.html?hack=cdeae4f6f41977c9fe0220daa7729ce6"
+          },
+          {
+            "description" : gameLink,
+            "link" : "https://www.puzzlescript.net/play.html?p=cdeae4f6f41977c9fe0220daa7729ce6"
+          }
+        ],
+        "VideoId": "whrHn8TDcdY"
     }
     
 ]
