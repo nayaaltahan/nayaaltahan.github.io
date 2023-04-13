@@ -99,6 +99,50 @@ let mobileApplications = [
 ];
 let games = [
     {
+        "Title": "The Great Oaks",
+        "Description": "A 2.5D platformer Co-op Game with a humorous tone based on the concept of caring. In this vertical slice, you may get to know better our main protagonists, Rani the Frog and Onwell the Robot. My role was a programmer and one of my bigger tasks was to program the character physics from scratch without using Unity's built-in rigidbodies",
+        "ProjectLinks": [,
+          {
+            "description" : gameLink,
+            "link" : "https://barrythecoolbee.itch.io/the-great-oaks"
+          }
+        ],
+        "ImageName": "oaks"
+    },
+    {
+        "Title": "I Am Happy",
+        "Description": "The game is an action- & narrative-packed roguelike game which takes place within the mind of a girl, who is fighting with her inner demons created by toxic relationships, self-doubt and the ghosts of the past. Throughout the game you shall dive into her psyche, figure out her troubles and hopefully help her overcome her negative emotions and mental issues.",
+        "ProjectLinks": [,
+          {
+            "description" : gameLink,
+            "link" : "https://salomes-crescent.itch.io/i-am-happy"
+          }
+        ],
+        "ImageName": "happy"
+    },
+    {
+        "Title": "Boopy & Beepo",
+        "Description": "A 2.5D Platformer Co-Op Game. Play as one of two unique characters with its own abilities within a fantasy world. The game encourages exploration through platforming puzzles and communication between players. The game was made during a 2 days game jam and my role was a programmer.",
+        "ProjectLinks": [,
+          {
+            "description" : gameLink,
+            "link" : "https://barrythecoolbee.itch.io/global-game-jam-2022"
+          }
+        ],
+        "ImageName": "boopy"
+    },
+    {
+        "Title": "Pet Survivors",
+        "Description": "This game prototype took inspiration from different roguelikes to create a new game experience. The game lets players enjoy two types of gameplay. One is combat-focused in a separate level, and one is a cozy base building in a hub world with pets you could tame and take care of.",
+        "ProjectLinks": [,
+          {
+            "description" : gameLink,
+            "link" : "https://nnaya.itch.io/pet-survivors"
+          }
+        ],
+        "VideoId": "ATFMM5wSVGM"
+    },
+    {
         "Title": "Pink Panther Recreation",
         "Description": "The game is a recreation of the Boss level in Pink Panther: Pinkadelic Pursuit. The game is developed in Unity, and the assets asnd animations are developed in Adobe",
         "ProjectLinks": [{
@@ -235,6 +279,16 @@ function addVideo(VideoId){
     return iframe;
 }
 
+function addImage(ImageName){
+    var image = document.createElement("IMG");
+    image.alt = "Game Thumbnail";
+    image.setAttribute('class', 'photo');
+    image.setAttribute('width', '100%')
+    image.setAttribute('height', 'auto')
+    image.src= "./src/img/project-images/" + ImageName + ".png";
+    return image;
+}
+
 function addProjectAsCard(project, column = "col-md-6"){
   var col = document.createElement("DIV")
     col.classList.add(column);
@@ -269,15 +323,20 @@ function addProjectAsCard(project, column = "col-md-6"){
     });
     textDiv.append(btnGroup)
 
-    var videoDiv = document.createElement("DIV")
-   // videoDiv.classList.add("auto-resizable-iframe");
-    videoDiv.classList.add("embed-responsive");
-    videoDiv.classList.add("embed-responsive-16by9");
-    videoDiv.classList.add("card-img-top");
-    let div = document.createElement("DIV")
-    videoDiv.append(addVideo(project.VideoId))
-
-    col.append(videoDiv)
-    col.append(textDiv)
+    
+    
+    if(project.VideoId){
+        var videoDiv = document.createElement("DIV");
+        videoDiv.classList.add("embed-responsive");
+        videoDiv.classList.add("embed-responsive-16by9");
+        videoDiv.classList.add("card-img-top");
+        videoDiv.append(addVideo(project.VideoId))
+        col.append(videoDiv)
+    }else{
+        var imageDiv = document.createElement("DIV");
+        imageDiv.append(addImage(project.ImageName));
+        col.append(imageDiv);
+    }
+    col.append(textDiv);
     return col;
 }

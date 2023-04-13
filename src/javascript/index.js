@@ -1,7 +1,7 @@
 import * as projectsHandler from '../javascript/projectsHandler';
 
 var i = 0;
-var txt = "I’m Naya Al Tahan, and I have recently graduated as a software engineer and am currently pursuing a masters degree in games technology at ITU, Copenhagen, Denmark. \nNext to my studies, I work as a student backend developer with The LEGO Group. "
+var txt = "I’m Naya Al Tahan, and I'm almost graduating as a Game Developer from the Games MSc Technology Track from ITU, Copenhagen, Denmark. \nNext to my studies, I work as a student Unity developer at The LEGO Group. "
 var speed = 60;
 
 
