@@ -1,8 +1,10 @@
 import * as projectsHandler from '../javascript/projectsHandler';
 
 var i = 0;
-var txt = "I’m Naya Al Tahan, and I'm almost graduating as a Game Developer from the Games MSc Technology Track from ITU, Copenhagen, Denmark. \nNext to my studies, I work as a student Unity developer at The LEGO Group. "
-var speed = 60;
+var txt = "My name is Naya, and I make games. I'm primarily a programmer, but I love trying out different areas in game dev, "+
+ "such as designing, and making 3D models. I'm a games technology graduate, and currently making LEGO games at the LEGO Group. "+
+ "Besides that, I help organize events and meetups for women and gender minorities in the games industry in Denmark, as part of WiG DK.";
+var speed = 20;
 
 
 (function () {

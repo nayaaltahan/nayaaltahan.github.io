@@ -8,7 +8,8 @@
 .btn-secondary:hover,
 .btn-secondary:focus {
   color: #353535;
-  text-shadow: none; /* Prevent inheritance from `body` */
+  text-shadow: none;
+  /* Prevent inheritance from `body` */
 }
 
 
@@ -43,8 +44,8 @@ body {
   border-bottom-color: rgba(255, 255, 255, .25);
 }
 
-.nav-masthead .nav-link + .nav-link {
-  margin-left: 1rem;
+.nav-masthead .nav-link+.nav-link {
+  margin-left: 3rem;
 }
 
 .nav-masthead .active {
@@ -71,10 +72,14 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+  text-align: justify;
+  text-justify: inter-word;
+
 }
 
-.card{
-    background-color:  rgb(26, 26, 26);
+.card {
+  background-color: rgb(26, 26, 26);
 }
 
 #mainSection {
@@ -90,6 +95,6 @@ body {
   padding: 10px;
 }
 
-.jumbotron{
+.jumbotron {
   background-color: black;
 }
